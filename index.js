@@ -3,9 +3,9 @@ const gfs = require('get-folder-size');
 const ls = require('recursive-readdir');
 
 const config = {
-  DIR: '.',
-  OUTDIR: './out',
-  LIMIT_SIZE: 512 // MB
+  DIR: '.', // Input
+  OUTDIR: '.', // Output
+  LIMIT_SIZE: 1024 // in MB - Ensure that this is lower than max file size
 };
 
 const getSize = gfs(config.DIR, (err, result) => {
